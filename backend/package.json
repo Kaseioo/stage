@@ -1,0 +1,39 @@
+{
+	"name": "backend",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "node dist/server.js",
+		"dev": "npx nodemon src/server.ts",
+		"build": "npx tsc",
+		"lint": "npx eslint . --ext .ts",
+		"format": "npx prettier --write ."
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"packageManager": "pnpm@10.6.4",
+	"dependencies": {
+		"@sequelize/sqlite3": "^7.0.0-alpha.45",
+		"@types/sqlite3": "^5.1.0",
+		"bindings": "^1.5.0",
+		"cors": "^2.8.5",
+		"dotenv": "^16.4.7",
+		"express": "^4.21.2",
+		"sequelize": "^6.37.6"
+	},
+	"devDependencies": {
+		"@types/cors": "^2.8.17",
+		"@types/express": "^5.0.0",
+		"@types/node": "^22.13.10",
+		"@types/sequelize": "^4.28.20",
+		"@typescript-eslint/eslint-plugin": "^8.26.1",
+		"@typescript-eslint/parser": "^8.26.1",
+		"eslint": "^9.22.0",
+		"nodemon": "^3.1.9",
+		"prettier": "^3.5.3",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.8.2"
+	}
+}
