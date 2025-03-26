@@ -48,6 +48,17 @@
         "status": "Status",
         "priority": "Priority"
     },
+    "areas": {
+        "manageAreas": "Manage Areas",
+        "addArea": "Add Area",
+        "editArea": "Edit Area",
+        "areaName": "Area Name",
+        "noAreasFound": "No areas found.",
+        "confirmDelete": "Are you sure you want to delete the area \"{{name}}\" (ID: {{id}})? This may affect existing processes linked to it.",
+        "createSuccess": "Area \"{{name}}\" created successfully.",
+        "updateSuccess": "Area \"{{name}}\" updated successfully.",
+        "deleteSuccess": "Area deleted successfully."
+    },
     "common": {
         "actions": "Actions",
         "edit": "Edit",
@@ -72,7 +83,9 @@
         "fetchFailed": "Failed to fetch {{resource}}.",
         "submitFailed": "Failed to submit {{resource}}.",
         "deleteFailed": "Failed to delete {{resource}}.",
-        "validationError": "Please correct the errors in the form"
+        "validationError": "Please correct the errors in the form",
+		"nameExists": "Name already exists.",
+		"cannotDeleteHasProcesses": "Cannot delete area because it is linked to one or more processes." 
     },
     "resources": {
         "process": "process",

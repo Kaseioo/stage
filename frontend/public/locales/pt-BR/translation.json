@@ -48,6 +48,17 @@
         "status": "Status",
         "priority": "Prioridade"
     },
+    "areas": {
+        "manageAreas": "Gerenciar Áreas",
+        "addArea": "Adicionar Área",
+        "editArea": "Editar Área",
+        "areaName": "Nome da Área",
+        "noAreasFound": "Nenhuma área encontrada.",
+        "confirmDelete": "Tem certeza de que deseja excluir a área \"{{name}}\" (ID: {{id}})? Isso pode afetar processos existentes vinculados a ela.",
+        "createSuccess": "Área \"{{name}}\" criada com sucesso.",
+        "updateSuccess": "Área \"{{name}}\" atualizada com sucesso.",
+        "deleteSuccess": "Área excluída com sucesso."
+    },
     "common": {
         "actions": "Ações",
         "edit": "Editar",
@@ -72,7 +83,9 @@
         "fetchFailed": "Falha ao buscar {{resource}}.",
         "submitFailed": "Falha ao enviar {{resource}}.",
         "deleteFailed": "Falha ao excluir {{resource}}.",
-        "validationError": "Por favor, corrija os erros no formulário"
+        "validationError": "Por favor, corrija os erros no formulário",
+        "nameExists": "Nome já existe.",
+        "cannotDeleteHasProcesses": "Não é possível excluir a área porque ela está vinculada a um ou mais processos."
     },
     "resources": {
         "process": "processo",
