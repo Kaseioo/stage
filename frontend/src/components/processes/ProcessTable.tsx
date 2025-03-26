@@ -74,6 +74,8 @@ export const ProcessTable: React.FC<ProcessTableProps> = ({
 						return (
 							<tr key={process.id} className="hover:bg-gray-50 dark:hover:bg-gray-700/50">
 								{/* Name Column with Indent and Toggle */}
+								{/* Area should technically be first, but currently it looks pretty bad */}
+								{/* TODO: review table display order */}
 								<td className="px-4 py-3 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">
 									<div className="flex items-center" style={{ paddingLeft }}>
 										{/* Toggle Button */}
