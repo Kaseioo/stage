@@ -1,0 +1,84 @@
+{
+    "login": {
+        "title": "Bem-vindo(a)",
+        "prompt": "Por favor, faça login para continuar.",
+        "button": "Iniciar Sessão",
+        "loggingIn": "Iniciando sessão..."
+    },
+    "sidebar": {
+        "processes": "Processos",
+        "visualizations": "Visualizações",
+        "settings": "Configurações",
+        "help": "Central de Ajuda",
+        "logout": "Sair"
+    },
+    "pages": {
+        "processes": {
+            "title": "Gerenciamento de Processos"
+        },
+        "visualizations": {
+            "title": "Visualizações de Dados"
+        },
+        "settings": {
+            "title": "Configurações do Aplicativo",
+            "content": "Ajuste suas preferências aqui."
+        },
+        "help": {
+            "title": "Ajuda e Suporte",
+            "content": "Encontre respostas e guias."
+        }
+    },
+    "theme": {
+        "toggle_dark": "Alternar para Modo Escuro",
+        "toggle_light": "Alternar para Modo Claro"
+    },
+    "processes": {
+        "addProcess": "Adicionar Processo",
+        "editProcess": "Editar Processo",
+        "noProcessesFound": "Nenhum processo encontrado.",
+        "confirmDelete": "Tem certeza de que deseja excluir o processo ID {{id}}? Esta ação não pode ser desfeita."
+    },
+    "processLabels": {
+        "name": "Nome",
+        "description": "Descrição",
+        "area": "Área",
+        "parentProcess": "Processo Pai",
+        "relatedTools": "Ferramentas Relacionadas",
+        "relatedUsers": "Usuários Relacionados",
+        "status": "Status",
+        "priority": "Prioridade"
+    },
+    "common": {
+        "actions": "Ações",
+        "edit": "Editar",
+        "delete": "Excluir",
+        "create": "Criar",
+        "saveChanges": "Salvar Alterações",
+        "saving": "Salvando...",
+        "cancel": "Cancelar",
+        "loading": "Carregando...",
+        "loadingFormData": "Carregando dados do formulário...",
+        "none": "Nenhum",
+        "unknown": "Desconhecido",
+        "selectPlaceholder": "Selecione uma opção...",
+        "requiredField": "Este campo é obrigatório"
+    },
+    "formErrors": {
+        "required": "{{field}} é obrigatório.",
+        "requiredSelect": "Por favor, selecione um(a) {{field}}.",
+        "validationError": "Falha na validação"
+    },
+    "errors": {
+        "fetchFailed": "Falha ao buscar {{resource}}.",
+        "submitFailed": "Falha ao enviar {{resource}}.",
+        "deleteFailed": "Falha ao excluir {{resource}}.",
+        "validationError": "Por favor, corrija os erros no formulário"
+    },
+    "resources": {
+        "process": "processo",
+        "processes": "processos",
+        "area": "área",
+        "areas": "áreas",
+        "processesAndAreas": "processos e áreas"
+    }
+}

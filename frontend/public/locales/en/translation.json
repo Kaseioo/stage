@@ -1,0 +1,84 @@
+{
+    "login": {
+        "title": "Welcome",
+        "prompt": "Please log in to continue.",
+        "button": "Login",
+        "loggingIn": "Logging in..."
+    },
+    "sidebar": {
+        "processes": "Processes",
+        "visualizations": "Visualizations",
+        "settings": "Settings",
+        "help": "Help Center",
+        "logout": "Log Out"
+    },
+    "pages": {
+        "processes": {
+            "title": "Process Management"
+        },
+        "visualizations": {
+            "title": "Data Visualizations"
+        },
+        "settings": {
+            "title": "Application Settings",
+            "content": "Adjust your preferences here."
+        },
+        "help": {
+            "title": "Help & Support",
+            "content": "Find answers and guides."
+        }
+    },
+    "theme": {
+        "toggle_dark": "Switch to Dark Mode",
+        "toggle_light": "Switch to Light Mode"
+    },
+    "processes": {
+        "addProcess": "Add Process",
+        "editProcess": "Edit Process",
+        "noProcessesFound": "No processes found.",
+        "confirmDelete": "Are you sure you want to delete process ID {{id}}? This action cannot be undone."
+    },
+    "processLabels": {
+        "name": "Name",
+        "description": "Description",
+        "area": "Area",
+        "parentProcess": "Parent Process",
+        "relatedTools": "Related Tools",
+        "relatedUsers": "Related Users",
+        "status": "Status",
+        "priority": "Priority"
+    },
+    "common": {
+        "actions": "Actions",
+        "edit": "Edit",
+        "delete": "Delete",
+        "create": "Create",
+        "saveChanges": "Save Changes",
+        "saving": "Saving...",
+        "cancel": "Cancel",
+        "loading": "Loading...",
+        "loadingFormData": "Loading form data...",
+        "none": "None",
+        "unknown": "Unknown",
+        "selectPlaceholder": "Select an option...",
+        "requiredField": "This field is required"
+    },
+    "formErrors": {
+        "required": "{{field}} is required.",
+        "requiredSelect": "Please select a {{field}}.",
+        "validationError": "Validation failed"
+    },
+    "errors": {
+        "fetchFailed": "Failed to fetch {{resource}}.",
+        "submitFailed": "Failed to submit {{resource}}.",
+        "deleteFailed": "Failed to delete {{resource}}.",
+        "validationError": "Please correct the errors in the form"
+    },
+    "resources": {
+        "process": "process",
+        "processes": "processes",
+        "area": "area",
+        "areas": "areas",
+        "processesAndAreas": "processes and areas"
+    }
+}
