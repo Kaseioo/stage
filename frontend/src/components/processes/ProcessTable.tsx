@@ -39,8 +39,8 @@ export const ProcessTable: React.FC<ProcessTableProps> = ({
 				<thead className="bg-gray-50 dark:bg-gray-700">
 					<tr>
 						{/* Name column needs more space maybe? */}
-						<th scope="col" className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">{t('processLabels.area')}</th>
-						<th scope="col" className="w-1/3 px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">{t('processLabels.name')}</th>
+						<th scope="col" className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">{t('processLabels.name')}</th>
+						<th scope="col" className="w-1/3 px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">{t('processLabels.area')}</th>
 						<th scope="col" className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">{t('processLabels.status')}</th>
 						<th scope="col" className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">{t('processLabels.priority')}</th>
 						<th scope="col" className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">{t('processLabels.description')}</th>
