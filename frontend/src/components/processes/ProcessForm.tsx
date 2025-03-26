@@ -141,9 +141,9 @@ export const ProcessForm: React.FC<ProcessFormProps> = ({
 				onChange={handleChange}
 				error={errors.parent_process_id}
 			>
-				<option value="">{t('common.none')}</option>
+				<option value="" className='text-gray-900 dark:text-gray-200'>{t('common.none')}</option>
 				{parentProcessOptions.map(proc => (
-					<option key={proc.id} value={proc.id}>{proc.name} (ID: {proc.id})</option>
+					<option key={proc.id} value={proc.id} className='text-gray-900 dark:text-gray-200'>{proc.name} (ID: {proc.id})</option>
 				))}
 			</FormSelect>
 

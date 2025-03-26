@@ -12,6 +12,8 @@ import { Modal } from '../components/common/Modal';
 import { AreaManagerModal } from '../components/area/AreaManagerModal'; // Import the new component
 import { FaPlus, FaLayerGroup } from 'react-icons/fa'; // Add FaLayerGroup
 
+import { getDisplayProcesses, DisplayProcess } from '../utils/processTree';
+
 const ProcessesPage: React.FC = () => {
 	const { t } = useTranslation();
 	const [processes, setProcesses] = useState<Process[]>([]);
@@ -28,6 +30,29 @@ const ProcessesPage: React.FC = () => {
 	const [areaName, setAreaName] = useState<string>(''); // Form input value for Area name
 	const [isSubmittingArea, setIsSubmittingArea] = useState<boolean>(false); // Loading state for Area form
 	const [areaError, setAreaError] = useState<string | null>(null); // Errors for Area operations
+
+	const [expandedIds, setExpandedIds] = useState<Set<number>>(new Set());
+
+	const displayProcesses = useMemo((): DisplayProcess[] => {
+		// Only compute if processes are loaded
+		if (!isLoading && processes.length > 0) {
+			return getDisplayProcesses(processes, expandedIds);
+		}
+		return []; // Return empty list while loading or if no processes
+	}, [processes, expandedIds, isLoading]);
+
+	// --- Toggle Expansion Handler ---
+	const toggleExpand = useCallback((id: number) => {
+		setExpandedIds(prevExpandedIds => {
+			const newExpandedIds = new Set(prevExpandedIds);
+			if (newExpandedIds.has(id)) {
+				newExpandedIds.delete(id);
+			} else {
+				newExpandedIds.add(id);
+			}
+			return newExpandedIds;
+		});
+	}, []);
 
 	// --- Data Fetching ---
 	const fetchData = useCallback(async (showLoading = true) => {
@@ -257,13 +282,17 @@ const ProcessesPage: React.FC = () => {
 
 			{/* Process Table */}
 			<ProcessTable
-				processes={processes}
+				// Pass the processed list
+				displayProcesses={displayProcesses}
 				areasMap={areasMap}
+				// parentProcessMap is less critical now but can stay
 				parentProcessMap={parentProcessMap}
 				onEdit={handleOpenEditProcessModal}
 				onDelete={handleDeleteProcess}
-				// Use general loading OR process submitting state for table feedback
 				isLoading={isLoading || isSubmittingProcess}
+				// Pass expansion state and handler
+				expandedIds={expandedIds}
+				toggleExpand={toggleExpand}
 			/>
 
 			{/* Process Add/Edit Modal */}
