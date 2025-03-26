@@ -1,0 +1,47 @@
+```mermaid
+sequenceDiagram
+    participant User
+    participant Frontend (React)
+    participant Backend API (Node)
+    participant Database (SQLite)
+
+    User->>Frontend (React): Navigates to '/processes' page
+    activate Frontend (React)
+
+    %% Fetch Processes in parallel with Areas
+    Frontend (React)->>Backend API (Node): GET /api/processes
+    activate Backend API (Node)
+    Frontend (React)->>Backend API (Node): GET /api/areas
+    activate Backend API (Node) # Second activation for parallel request
+
+
+    %% Backend handles Get Processes
+    Backend API (Node)->>Database (SQLite): Sequelize: Process.findAll()
+    activate Database (SQLite)
+    Database (SQLite)-->>Backend API (Node): Process Rows
+    deactivate Database (SQLite)
+    Backend API (Node)-->>Frontend (React): 200 OK [Process List]
+    deactivate Backend API (Node)
+
+    %% Crate new process
+    Frontend (React)->>Backend API (Node): POST /api/processes
+    Backend API (Node)->>Database (SQLite): Sequelize: Process.create()
+    Database (SQLite)-->>Backend API (Node): Query succeeded
+    Backend API (Node)-->>Frontend (React): 200 OK [Process Created]
+
+
+
+    %% Backend handles Get Areas
+    Backend API (Node)->>Database (SQLite): Sequelize: Area.findAll()
+    activate Database (SQLite) # Second DB activation
+    Database (SQLite)-->>Backend API (Node): Area Rows
+    deactivate Database (SQLite)
+    Backend API (Node)-->>Frontend (React): 200 OK [Area List]
+    deactivate Backend API (Node) # Deactivate second request handling
+
+    %% Frontend updates UI after both fetches complete (Promise.all)
+    Frontend (React)->>Frontend (React): Update state (setProcesses, setAreas)
+    Frontend (React)->>Frontend (React): Render ProcessTable with data
+    Frontend (React)-->>User: Displays Process List & UI
+    deactivate Frontend (React)
+```
