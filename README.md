@@ -149,3 +149,9 @@ Development: Concurrently, Prettier, ESLint
     -   Generate API documentation (e.g., Swagger/OpenAPI).
     -   Consider component documentation (e.g., Storybook).
 	-	Review all components for in-file documentation.
+-   **Generative AI:**
+    -   Explore integrating generative AI features (e.g., OpenAI API, Gemini API) for:
+	-   Generating process descriptions or suggestions.
+	-   Automating data entry or form filling.
+	-   Possibly creating images for processes, if necessary.
+    
