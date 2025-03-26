@@ -39,10 +39,11 @@ export const ProcessTable: React.FC<ProcessTableProps> = ({
 				<thead className="bg-gray-50 dark:bg-gray-700">
 					<tr>
 						{/* Name column needs more space maybe? */}
-						<th scope="col" className="w-1/3 px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">{t('processLabels.name')}</th>
 						<th scope="col" className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">{t('processLabels.area')}</th>
+						<th scope="col" className="w-1/3 px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">{t('processLabels.name')}</th>
 						<th scope="col" className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">{t('processLabels.status')}</th>
 						<th scope="col" className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">{t('processLabels.priority')}</th>
+						<th scope="col" className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">{t('processLabels.description')}</th>
 						{/* <th scope="col" className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider hidden md:table-cell">{t('processLabels.parentProcess')}</th> */}
 						<th scope="col" className="px-4 py-3 text-center text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">{t('common.actions')}</th>
 					</tr>
@@ -97,6 +98,7 @@ export const ProcessTable: React.FC<ProcessTableProps> = ({
 								<td className="px-4 py-3 whitespace-nowrap text-sm text-gray-600 dark:text-gray-300">{areasMap.get(process.area_id) || `${t('common.unknown')} ID: ${process.area_id}`}</td>
 								<td className="px-4 py-3 whitespace-nowrap text-sm text-gray-600 dark:text-gray-300">{process.status}</td>
 								<td className="px-4 py-3 whitespace-nowrap text-sm text-gray-600 dark:text-gray-300">{process.priority}</td>
+								<td className="px-4 py-3 whitespace-nowrap text-sm text-gray-600 dark:text-gray-300">{process.description}</td>
 								{/* <td className="px-4 py-3 whitespace-nowrap text-sm text-gray-600 dark:text-gray-300 hidden md:table-cell">{getParentName(process.parent_process_id)}</td> */}
 
 								{/* Action Buttons */}
