@@ -1,0 +1,30 @@
+{
+	"name": "stage_casetech_2s2024",
+	"version": "1.0.0",
+	"description": "Monorepo for Stage Management App",
+	"main": "index.js",
+	"scripts": {
+	  "// Frontend Scripts": "--------------------------------",
+	  "install:frontend": "cd frontend && npm install",
+	  "dev:frontend": "cd frontend && npm run dev",
+	  "build:frontend": "cd frontend && npm run build",
+	  "format:frontend": "cd frontend && npm run format",
+  
+	  "// Backend Scripts": "--------------------------------",
+	  "install:backend": "cd backend && npm install",
+	  "dev:backend": "cd backend && npm run dev",
+	  "start:backend": "cd backend && npm start",
+	  "build:backend": "cd backend && npm run build",
+  
+	  "// Combined Scripts": "------------------------------",
+	  "install:all": "npm install && npm run install:backend && npm run install:frontend",
+	  "dev": "concurrently \"npm:dev:backend\" \"npm:dev:frontend\" --kill-others-on-fail --names \"BACKEND,FRONTEND\" -c \"bgBlue.bold,bgMagenta.bold\"",
+	  "test": "echo \"Error: no root test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+	  "concurrently": "^8.2.2"
+	}
+  }
